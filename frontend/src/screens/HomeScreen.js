@@ -3,6 +3,7 @@ import Product from "../component/Product";
 import LoadingBox from "../component/LoadingBox";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
+
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
@@ -16,7 +17,7 @@ const HomeScreen = () => {
       {loading ? (
         <LoadingBox />
       ) : error ? (
-        <div>efefef</div>
+        <div>Error</div>
       ) : (
         <div className="row center">
           {products.map((product) => (
