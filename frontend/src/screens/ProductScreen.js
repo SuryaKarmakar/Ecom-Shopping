@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import RatingStar from "../component/RatingStar";
 import { useSelector, useDispatch } from "react-redux";
 import LoadingBox from "../component/LoadingBox";
@@ -7,11 +7,16 @@ import { detailsProduct } from "../actions/productActions";
 const ProductScreen = (props) => {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
+
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`);
+  };
   return (
     <div>
       {loading ? (
@@ -60,9 +65,35 @@ const ProductScreen = (props) => {
                     </div>
                   </div>
                 </li>
-                <li>
-                  <button className="primary block">Add to Cart</button>
-                </li>
+                {product.stock > 0 && (
+                  <>
+                    <li>
+                      <div className="row">
+                        <div>Qty</div>
+                        <div>
+                          <select
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
+                          >
+                            {[...Array(product.stock).keys()].map((x) => (
+                              <option key={x + 1} value={x + 1}>
+                                {x + 1}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <button
+                        onClick={addToCartHandler}
+                        className="primary block"
+                      >
+                        Add to Cart
+                      </button>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </div>
