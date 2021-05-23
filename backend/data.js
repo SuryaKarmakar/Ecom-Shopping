@@ -1,62 +1,61 @@
-const data ={
-    products : [
-        {
-            id : '1',
-            name :'Product 1',
-            category : 'Shirts',
-            image : '/images/product1.jpg',
-            price : 499,
-            stock :10,
-            rating : 4.5,
-            numRev : 10,
-            description : 'High quality product for men'
-        },
-        {
-            id : '2',
-            name :'Product 2',
-            category : 'Shirts',
-            image : '/images/product2.png',
-            price : 499,
-            stock :10,
-            rating : 4.5,
-            numRev : 10,
-            description : 'High quality product for men'
-        },
-        {
-            id : '3',
-            name :'Product 3',
-            category : 'Shirts',
-            image : '/images/product1.jpg',
-            price : 499,
-            stock :10,
-            rating : 4.5,
-            numRev : 10,
-            description : 'High quality product for men'
-        },
-        {
-            id : '4',
-            name :'Product 4',
-            category : 'Shirts',
-            image : '/images/product1.jpg',
-            price : 499,
-            stock :10,
-            rating : 4.5,
-            numRev : 10,
-            description : 'High quality product for men'
-        },
-        {
-            id : '5',
-            name :'Product 5',
-            category : 'Shirts',
-            image : '/images/product1.jpg',
-            price : 499,
-            stock :10,
-            rating : 4.5,
-            numRev : 10,
-            description : 'High quality product for men'
-        },
-        
-    ],
+const data = {
+  products: [
+    {
+      id: "1",
+      name: "Product 1",
+      category: "Shirts",
+      image: "/images/product1.jpg",
+      price: 489,
+      stock: 15,
+      rating: 4.5,
+      numRev: 15,
+      description: "High quality product for men",
+    },
+    {
+      id: "2",
+      name: "Product 2",
+      category: "Shirts",
+      image: "/images/product2.jpg",
+      price: 450,
+      stock: 10,
+      rating: 4.7,
+      numRev: 17,
+      description: "High quality product for men",
+    },
+    {
+      id: "3",
+      name: "Product 3",
+      category: "Shirts",
+      image: "/images/product3.jpg",
+      price: 499,
+      stock: 16,
+      rating: 4.1,
+      numRev: 20,
+      description: "High quality product for men",
+    },
+    {
+      id: "4",
+      name: "Product 4",
+      category: "Shirts",
+      image: "/images/product4.jpg",
+      price: 470,
+      stock: 18,
+      rating: 4.0,
+      numRev: 44,
+      description: "High quality product for men",
+    },
+    {
+      id: "5",
+      name: "Product 5",
+      category: "Shirts",
+      image: "/images/product5.jpg",
+      price: 499,
+      stock: 5,
+      rating: 4.3,
+      numRev: 24,
+      description: "High quality product for men",
+    },
+  ],
 };
 
 export default data;
