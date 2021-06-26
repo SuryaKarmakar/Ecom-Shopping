@@ -6,11 +6,11 @@ const Product = (props) => {
   const { product } = props;
   return (
     <div key={product.id} className="card">
-      <Link to={`/product/${product.id}`}>
+      <Link to={`/product/${product._id}`}>
         <img className="product-image" src={product.image} alt={product.name} />
       </Link>
       <div className="card-body">
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/product/${product._id}`}>
           <h2>{product.name}</h2>
         </Link>
         <RatingStar rating={product.rating} numRev={product.numRev} />
